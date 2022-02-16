@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./microfrontend.component.scss']
 })
 export class MicrofrontendComponent implements OnInit {
-  token: string = '';
+  token: any = '';
   constructor() { 
   }
 
@@ -14,7 +14,8 @@ export class MicrofrontendComponent implements OnInit {
      let value = sessionStorage.getItem('hostValue');
      console.log(value);
      sessionStorage.setItem('valor desde mi otro pc','Hola Mundo')
-     sessionStorage.getItem('adal.idtoken')
+     sessionStorage.setItem('adal.idtoken','hola')
+     this.token = sessionStorage.getItem('adal.idtoken')
   }
   toggleDarkMode(evt:any) {
     
