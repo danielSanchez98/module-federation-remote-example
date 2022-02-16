@@ -14,7 +14,6 @@ export class MicrofrontendComponent implements OnInit {
      let value = sessionStorage.getItem('hostValue');
      console.log(value);
      sessionStorage.setItem('valor desde mi otro pc','Hola Mundo')
-     sessionStorage.setItem('adal.idtoken','hola')
      this.token = sessionStorage.getItem('adal.idtoken')
   }
   toggleDarkMode(evt:any) {
